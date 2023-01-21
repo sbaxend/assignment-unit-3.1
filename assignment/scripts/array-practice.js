@@ -31,14 +31,14 @@ console.log('--- 3. Accessing items in an array ---');
 console.log('First animal is', animalArray[0])
 
 // 3.a. TODO: Log the second animal in the array 
-
+console.log('Second animal is', animalArray[1])
 
 // 3.b. TODO: Log the last animal in the array using it's array index 
-
+console.log('Last animal is', animalArray[3])
 
 // 3.c. (STRETCH) TODO: Log the last animal by using the array length, 
 //      instead of the exact index number of the last item
-
+console.log('Last animal is', animalArray [4]) //NEED TO FIX!!!
 
 
 // 4. Adding & Removing Array Items
@@ -50,7 +50,8 @@ console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Add a new food at the end of your array & log the array
 
-
+favoriteFoods.push('Smoothies');
+console.log('added an new favorite food to the end,', favoriteFoods);
 
 // Example: Remove the last animal by using Array.pop
 let removedAnimal = animalArray.pop();
@@ -59,14 +60,17 @@ console.log('The animals are now', animalArray);
 
 // 4.b. TODO: Remove the food at the end of your array & 
 //      log both the food removed and the updated array
-
+let removedFood = favoriteFoods.pop();
+console.log('Sadly Removed one of my favorite foods', removedFood);
+console.log('My new list of favorite foods are', favoriteFoods);
 
 // Example: Add an animal to the beginning using Array.unshift
 animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.c. TODO: Add a food at the beginning of the array & log the array
-
+favoriteFoods.unshift('Smoothies');
+console.log(`Added back a favorite food to the beginning: ${favoriteFoods}`);
 
 // Example: Remove the first animal using Array.shift
 removedAnimal = animalArray.shift();
@@ -75,20 +79,33 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
-
+favoriteFoods.shift();
+console.log('Removed Beginning Favorite food', removedFood);
+console.log('The foods are now', favoriteFoods)
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
-
+favoriteFoods[2] = 'Sushi';
+console.log('the updated list:', favoriteFoods)
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
+favoriteFoods.sort()
+favoriteFoods.reverse()
+
+console.log(favoriteFoods)
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+let favoriteFoodsString = favoriteFoods.join(' and ');
+console.log(favoriteFoodsString);
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+
+let fullList = favoriteFoods.concat(animalArray)
+console.log(fullList)
+
